@@ -1,5 +1,5 @@
 ---
-
+[A Screenshot of Google's Homepage][def3]
 The provided Python script performs several key functions to process data from the FIFA World Cup 2022 matches and then loads specific Key Performance Indicators (KPIs) for each team into a SQLite database.
 
 ### Here's a step-by-step breakdown of what the script does:
@@ -32,3 +32,7 @@ The provided Python script performs several key functions to process data from t
 This script automates the process of analyzing match data to extract valuable insights about team performances and storing these insights in a structured database format for easy access and further analysis.
 
 ---
+
+[def]: http://www.google.com/imgres?imgurl=https://static.dezeen.com/uploads/2019/09/qatar-2022-world-cup-emblem_dezeen_2364_col_6.jpg&imgrefurl=https://www.dezeen.com/2019/09/05/world-cup-emblem-qatar-2022/&h=2364&w=2364&tbnid=uGmvL_bivLVcEM&source=sa.im&tbnh=224&tbnw=224&usg=AI4_-kQ6kj8Z7UKXFL4GqYIQuOMl7pSJJA&vet=1&docid=SmvGFDqvDAG70M
+[def2]: http://www.google.com/imgres?imgurl=https://static.dezeen.com/uploads/2019/09/qatar-2022-world-cup-emblem_dezeen_2364_col_6.jpg&imgrefurl=https://www.dezeen.com/2019/09/05/world-cup-emblem-qatar-2022/&h=2364&w=2364&tbnid=uGmvL_bivLVcEM&source=sa.im&tbnh=224&tbnw=224&usg=AI4_-kQ6kj8Z7UKXFL4GqYIQuOMl7pSJJA&vet=1&docid=SmvGFDqvDAG70M
+[def3]: http://www.google.com/imgres?imgurl=https://static.dezeen.com/uploads/2019/09/qatar-2022-world-cup-emblem_dezeen_2364_col_6.jpg&imgrefurl=https://www.dezeen.com/2019/09/05/world-cup-emblem-qatar-2022/&h=2364&w=2364&tbnid=uGmvL_bivLVcEM&source=sa.im&tbnh=224&tbnw=224&usg=AI4_-kQ6kj8Z7UKXFL4GqYIQuOMl7pSJJA&vet=1&docid=SmvGFDqvDAG70M
