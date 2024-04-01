@@ -1,9 +1,7 @@
 import pandas as pd
-import sqlite3
+import json
 
-
-
-# Function to calculate KPIs
+# Adjusted function to calculate sum of goals and average possession
 def calculate_kpis(data):
     teams = {}
     for index, row in data.iterrows():
@@ -12,18 +10,19 @@ def calculate_kpis(data):
             if team_name not in teams:
                 teams[team_name] = {
                     'possession': [],
-                    'goals': [],
+                    'goals': 0,  # Changed to a sum counter
                     'matches': 0,
                     'wins': 0,
                     'draws': 0,
                     'losses': 0
                 }
-            
-            # Add possession and goals
+           
+            # Add goals as sum
+            teams[team_name]['goals'] += row[f'number of goals {team}']  # Summing goals
+            # Collect possession percentages for later calculation of average
             teams[team_name]['possession'].append(row[f'possession {team}'])
-            teams[team_name]['goals'].append(row[f'number of goals {team}'])
             teams[team_name]['matches'] += 1
-            
+           
             # Determine match outcome
             if row['number of goals team1'] == row['number of goals team2']:
                 teams[team_name]['draws'] += 1
@@ -34,31 +33,27 @@ def calculate_kpis(data):
                 teams[team_name]['losses'] += 1
     return teams
 
-# Function to insert KPIs into SQLite database
-def insert_kpis_into_db(teams):
-    conn = sqlite3.connect('fifa_wc_2022_kpis.db')
-    cursor = conn.cursor()
-    
-    # Create table for KPIs
-    cursor.execute('''CREATE TABLE IF NOT EXISTS team_kpis
-                      (team_name TEXT, matches INTEGER, wins INTEGER, draws INTEGER,
-                      losses INTEGER, avg_possession REAL, total_goals INTEGER, avg_goals_per_match REAL)''')
-    
-    # Insert KPIs into the table
+# Adjusted function to save KPIs to a JSON file, calculating average possession
+def save_kpis_to_json(teams, filepath):
+    teams_kpis = {}
     for team, stats in teams.items():
-        avg_possession = sum(stats['possession']) / len(stats['possession'])
-        total_goals = sum(stats['goals'])
-        avg_goals = total_goals / stats['matches']
-        cursor.execute('INSERT INTO team_kpis VALUES (?, ?, ?, ?, ?, ?, ?, ?)',
-                       (team, stats['matches'], stats['wins'], stats['draws'], stats['losses'],
-                        avg_possession, total_goals, avg_goals))
-    
-    # Commit changes and close the connection
-    conn.commit()
-    conn.close()
+        if stats['matches'] > 3:  # Check if the team has played more than 3 matches
+            avg_possession = sum(stats['possession']) / len(stats['possession']) if stats['possession'] else 0
+            teams_kpis[team] = {
+                'matches': stats['matches'],
+                'wins': stats['wins'],
+                'draws': stats['draws'],
+                'losses': stats['losses'],
+                'avg_possession': avg_possession,
+                'total_goals': stats['goals'],
+            }
+   
+    # Convert filtered KPIs to JSON and save
+    with open(filepath, 'w') as f:
+        json.dump(teams_kpis, f, indent=4)
 
 # Load the dataset
-file_path = 'Fifa_world_cup_2022_matches (unedited).csv'
+file_path = 'Fifa_world_cup_2022_matches.csv'
 data = pd.read_csv(file_path)
 
 # Convert possession percentages to numeric values
@@ -67,8 +62,10 @@ data['possession team2'] = data['possession team2'].str.rstrip('%').astype('floa
 
 # Calculate KPIs
 teams = calculate_kpis(data)
+# Define the JSON file path
+json_file_path = 'fifa_wc_2022_kpis.json'
 
-# Insert KPIs into SQLite database
-insert_kpis_into_db(teams)
+# Save KPIs into JSON file for teams with more than 3 matches
+save_kpis_to_json(teams, json_file_path)
 
-print("KPIs have been successfully loaded into the SQLite database.")
+print("KPIs for teams that played more than 3 matches have been successfully saved to the JSON file.")

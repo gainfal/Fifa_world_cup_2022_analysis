@@ -1,5 +1,5 @@
 ---
-[A Screenshot of Google's Homepage][def3]
+![alt text](https://file%2B.vscode-resource.vscode-cdn.net/Users/gain/Desktop/FIFA%20WORLD%20CUP.png?version%3D1711990360023)
 The provided Python script performs several key functions to process data from the FIFA World Cup 2022 matches and then loads specific Key Performance Indicators (KPIs) for each team into a SQLite database.
 
 ### Here's a step-by-step breakdown of what the script does:

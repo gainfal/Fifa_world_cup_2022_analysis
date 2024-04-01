@@ -1,0 +1,130 @@
+{
+    "england": {
+        "matches": 5,
+        "wins": 3,
+        "draws": 1,
+        "losses": 1,
+        "avg_possession": 0.5780000000000001,
+        "total_goals": 13
+    },
+    "senegal": {
+        "matches": 4,
+        "wins": 2,
+        "draws": 0,
+        "losses": 2,
+        "avg_possession": 0.39749999999999996,
+        "total_goals": 5
+    },
+    "netherlands": {
+        "matches": 5,
+        "wins": 3,
+        "draws": 2,
+        "losses": 0,
+        "avg_possession": 0.45,
+        "total_goals": 10
+    },
+    "united states": {
+        "matches": 4,
+        "wins": 1,
+        "draws": 2,
+        "losses": 1,
+        "avg_possession": 0.47500000000000003,
+        "total_goals": 3
+    },
+    "argentina": {
+        "matches": 7,
+        "wins": 4,
+        "draws": 2,
+        "losses": 1,
+        "avg_possession": 0.5114285714285713,
+        "total_goals": 15
+    },
+    "poland": {
+        "matches": 4,
+        "wins": 1,
+        "draws": 1,
+        "losses": 2,
+        "avg_possession": 0.3175,
+        "total_goals": 3
+    },
+    "france": {
+        "matches": 7,
+        "wins": 5,
+        "draws": 1,
+        "losses": 1,
+        "avg_possession": 0.4485714285714285,
+        "total_goals": 16
+    },
+    "australia": {
+        "matches": 4,
+        "wins": 2,
+        "draws": 0,
+        "losses": 2,
+        "avg_possession": 0.3125,
+        "total_goals": 4
+    },
+    "morocco": {
+        "matches": 7,
+        "wins": 3,
+        "draws": 2,
+        "losses": 2,
+        "avg_possession": 0.3485714285714286,
+        "total_goals": 6
+    },
+    "croatia": {
+        "matches": 7,
+        "wins": 2,
+        "draws": 4,
+        "losses": 1,
+        "avg_possession": 0.48000000000000004,
+        "total_goals": 8
+    },
+    "japan": {
+        "matches": 4,
+        "wins": 2,
+        "draws": 1,
+        "losses": 1,
+        "avg_possession": 0.2975,
+        "total_goals": 5
+    },
+    "spain": {
+        "matches": 4,
+        "wins": 1,
+        "draws": 2,
+        "losses": 1,
+        "avg_possession": 0.6900000000000001,
+        "total_goals": 9
+    },
+    "switzerland": {
+        "matches": 4,
+        "wins": 2,
+        "draws": 0,
+        "losses": 2,
+        "avg_possession": 0.43,
+        "total_goals": 5
+    },
+    "korea republic": {
+        "matches": 4,
+        "wins": 1,
+        "draws": 1,
+        "losses": 2,
+        "avg_possession": 0.4225,
+        "total_goals": 5
+    },
+    "portugal": {
+        "matches": 5,
+        "wins": 3,
+        "draws": 0,
+        "losses": 2,
+        "avg_possession": 0.542,
+        "total_goals": 12
+    },
+    "brazil": {
+        "matches": 5,
+        "wins": 3,
+        "draws": 1,
+        "losses": 1,
+        "avg_possession": 0.5040000000000001,
+        "total_goals": 8
+    }
+}
