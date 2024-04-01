@@ -1,5 +1,5 @@
 ---
-! [Qatar 2022] [def4]
+![alt logo](<FIFA WORLD CUP.png>)
 The provided Python script performs several key functions to process data from the FIFA World Cup 2022 matches and then loads specific Key Performance Indicators (KPIs) for each team into a SQLite database.
 
 ### Here's a step-by-step breakdown of what the script does:
