@@ -22,6 +22,7 @@ SELECT team_name, avg_possession FROM team_kpis ORDER BY avg_possession DESC LIM
 ```sql
 SELECT team_name, (CAST(wins AS REAL) / losses) AS win_loss_ratio FROM team_kpis WHERE losses > 0 ORDER BY win_loss_ratio DESC LIMIT 10;
 ```
+<img src="./images//Top 10 Teams with the Best Win-Loss Ratio.png" alt="/Top 10 Teams with the Best Win-Loss Ratio" width="500" />
 
 ### 5. Top 10 Teams with the Most Wins
 
