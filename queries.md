@@ -9,6 +9,7 @@ SELECT * FROM team_kpis ORDER BY matches DESC LIMIT 10;
 ```sql
 SELECT team_name, total_goals FROM team_kpis ORDER BY total_goals DESC LIMIT 10;
 ```
+<img src="./images/Top 10 Scoring Teams.png" alt="Top 10 Scoring Teams" width="500" />
 
 ### 3. Top 10 Teams with the Highest Average Possession
 
