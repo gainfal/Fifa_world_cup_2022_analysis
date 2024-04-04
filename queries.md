@@ -30,7 +30,7 @@ SELECT team_name, (CAST(wins AS REAL) / losses) AS win_loss_ratio FROM team_kpis
 ```sql
 SELECT team_name, wins FROM team_kpis ORDER BY wins DESC LIMIT 10;
 ```
-
+<img src="./images/Top 10 Teams with the Most Wins.png" alt="Top 10 Teams with the Most Wins" width="500" />
 
 ### 6. Top 10 Teams with the Most Matches Played
 
