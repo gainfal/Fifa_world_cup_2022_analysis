@@ -4,6 +4,7 @@
 SELECT * FROM team_kpis ORDER BY matches DESC LIMIT 10;
 ```
 <img src="./images/Top 10 KPIs for All Teams.png" alt="Top 10 KPIs for All Teams" width="500" />
+
 ### 2. Top 10 Scoring Teams
 
 ```sql
