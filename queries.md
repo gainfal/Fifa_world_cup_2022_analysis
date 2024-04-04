@@ -17,6 +17,7 @@ SELECT team_name, total_goals FROM team_kpis ORDER BY total_goals DESC LIMIT 10;
 ```sql
 SELECT team_name, avg_possession FROM team_kpis ORDER BY avg_possession DESC LIMIT 10;
 ```
+<img src="./images/Top 10 Teams with the Highest Average Possession.png" alt="Top 10 Teams with the Highest Average Possession" width="500" />
 
 ### 4. Top 10 Teams with the Best Win-Loss Ratio
 
